@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Bethinaedemo";
+  src: url("../public/fonts/BethinaedemoRegular-KVRmZ.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  body {
+    @apply bg-[#f4cfa3] m-[1.3rem];
+  }
+
+  p {
+    @apply pb-[0.5rem];
+  }
+}
+
+@layer components {
+  .btn {
+    @apply bg-[#bb6830] h-auto px-6 py-3 rounded-lg;
+  }
+
+  .blog-item {
+    @apply border-b border-b-black py-3;
+  }
+
+  .post-date {
+    @apply text-[1.3rem] pl-[.1rem];
+  }
+}
+
+@layer utilities {
+  .newsletter-form {
+    @apply px-[1.5rem];
+  }
+}
