@@ -9,7 +9,7 @@
 
 @layer base {
   body {
-    @apply bg-[#f4cfa3] m-[1.3rem];
+    @apply bg-[#f4cfa3] m-[1.3rem] text-[#111];
   }
 
   p {
@@ -19,7 +19,7 @@
 
 @layer components {
   .btn {
-    @apply bg-[#bb6830] h-auto px-6 py-3 rounded-lg;
+    @apply bg-[#bb6830] h-auto px-6 py-3 rounded-lg text-[1.2rem];
   }
 
   .blog-item {
