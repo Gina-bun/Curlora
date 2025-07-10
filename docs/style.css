@@ -351,8 +351,8 @@
   .bg-transparent {
     background-color: transparent;
   }
-  .bg-\[url\(\'\.\.\/public\/images\/green\.jpeg\'\)\] {
-    background-image: url('../public/images/green.jpeg');
+  .bg-\[url\(\'\/public\/images\/green\.jpeg\'\)\] {
+    background-image: url('/public/images/green.jpeg');
   }
   .bg-cover {
     background-size: cover;
@@ -428,7 +428,7 @@
 }
 @font-face {
   font-family: "Bethinaedemo";
-  src: url("../public/fonts/BethinaedemoRegular-KVRmZ.otf") format("opentype");
+  src: url("/public/fonts/BethinaedemoRegular-KVRmZ.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
