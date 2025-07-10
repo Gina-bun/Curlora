@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: "Bethinaedemo";
-  src: url("fonts/BethinaedemoRegular-KVRmZ.otf") format("opentype");
+  src: url("./assets/fonts/BethinaedemoRegular-KVRmZ.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
