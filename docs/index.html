@@ -34,7 +34,7 @@
       >
         <nav
           id="iconbar"
-          class="h-full flex px-5 gap-3 items-center justify-end"
+          class="h-full flex px-5 gap-3 items-center justify-end min-md:hidden"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -79,10 +79,19 @@
             />
           </svg>
         </nav>
+
+        <nav
+          class="h-full max-sm:hidden flex justify-center gap-4 items-center text-[1.5rem]"
+        >
+          <li><a href="#">About</a></li>
+          <li><a href="#">Stories</a></li>
+          <li><a href="#">Hair tips</a></li>
+          <li><a href="#">Glossary</a></li>
+        </nav>
       </header>
       <div
         id="landing-section"
-        class="relative bg-[url('./assets/images/green.jpeg')] bg-cover bg-center w-full h-[15rem] border-20 border-t-0 border-solid border-[#436741] rounded-bl-lg rounded-br-lg -mt-px"
+        class="relative bg-[url('./assets/images/green.jpeg')] bg-cover bg-center w-full h-[18rem] border-20 border-t-0 border-solid border-[#436741] rounded-bl-lg rounded-br-lg -mt-px"
       >
         <!-- overlay -->
         <div class="absolute inset-0 bg-red-500/25"></div>
@@ -91,11 +100,11 @@
 
     <!-- Intro + CTA -->
     <div id="intro" class="h-auto mt-[1.5rem] px-[0.2rem]">
-      <span class="font-bold text-[1.5rem]">
+      <span class="font-bold text-[1.5rem] min-md:text-[2rem]">
         Curlora is a space for natural hair — real, textured, and
         unapologetic.</span
       >
-      <p class="text-[1.1rem]">
+      <p class="text-[1.1rem] min-md:text-[1.65rem]">
         From care tips to style inspo, everything here is for the crown you were
         born with.
       </p>
@@ -104,23 +113,25 @@
 
     <!-- Latest blogs -->
     <div id="latest-blogs" class="h-auto my-1 pt-[1.5rem]">
-      <h2 class="text-[1.5rem] font-bold">Latest Blogs</h2>
+      <h2 class="text-[1.5rem] font-bold min-md:text-[2rem]">Latest Blogs</h2>
 
       <div
         id="blog-posts"
-        class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-3 mt-[0.1rem]"
+        class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-md:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] gap-3 mt-[0.1rem]"
       >
         <div class="blog-item">
-          <div class="grid grid-cols-3">
-            <div class="text-[1.1rem] font-bold col-span-2">
+          <div class="grid grid-cols-3 min-md:grid-cols-4">
+            <div
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem]"
+            >
               Discover the secrets to maintaining healthy curls with our expert
               tips and tricks.
             </div>
             <div class="blog-image col-span-1 bg-[#000]"></div>
           </div>
           <!-- Date and icons -->
-          <div id="blog-item-icons" class="flex py-[.5rem] gap-2">
-            <span id="post-date" class="post-date">July 3</span>
+          <div id="blog-item-icons" class="flex py-[.5rem] gap-2 items-center">
+            <span id="post-date" class="post-date text-[1.4rem]">July 3</span>
             <div id="blog-icons" class="flex gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -171,16 +182,20 @@
         </div>
 
         <div class="blog-item">
-          <div class="grid grid-cols-3">
-            <div class="text-[1.1rem] font-bold col-span-2">
+          <div class="grid grid-cols-3 min-md:grid-cols-4">
+            <div
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem]"
+            >
               Discover the secrets to maintaining healthy curls with our expert
               tips and tricks.
             </div>
             <div class="blog-image col-span-1 bg-[#000]"></div>
           </div>
           <!-- Date and icons -->
-          <div id="blog-item-icons" class="flex py-[.5rem] gap-2">
-            <span id="post-date" class="post-date">July 3</span>
+          <div id="blog-item-icons" class="flex py-[.5rem] gap-2 items-center">
+            <span id="post-date" class="post-date min-md:text-[1.4rem]"
+              >July 3</span
+            >
             <div id="blog-icons" class="flex gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -235,23 +250,27 @@
     <!-- Main page starts -->
     <!-- Main blog section -->
     <div id="main-blogs" class="h-auto my-1 pt-[1.5rem] mt-[1.5rem]">
-      <h2 class="text-[1.5rem] font-bold">For You</h2>
+      <h2 class="text-[1.5rem] font-bold min-md:text-[2rem]">For You</h2>
 
       <div
         id="blog-posts"
-        class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] gap-3 mt-[0.1rem]"
+        class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-md:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] gap-3 mt-[0.1rem]"
       >
         <div class="blog-item">
-          <div class="grid grid-cols-3">
-            <div class="text-[1.1rem] font-bold col-span-2">
+          <div class="grid grid-cols-3 min-md:grid-cols-4">
+            <div
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem]"
+            >
               Discover the secrets to maintaining healthy curls with our expert
               tips and tricks.
             </div>
             <div class="blog-image col-span-1 bg-[#000]"></div>
           </div>
           <!-- Date and icons -->
-          <div id="blog-item-icons" class="flex py-[.5rem] gap-2">
-            <span id="post-date" class="post-date">July 3</span>
+          <div id="blog-item-icons" class="flex py-[.5rem] gap-2 items-center">
+            <span id="post-date" class="post-date min-md:text-[1.4rem]"
+              >July 3</span
+            >
             <div id="blog-icons" class="flex gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -302,15 +321,17 @@
         </div>
 
         <div class="blog-item">
-          <div class="grid grid-cols-3">
-            <div class="text-[1.1rem] font-bold col-span-2">
+          <div class="grid grid-cols-3 min-md:grid-cols-4">
+            <div
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem]"
+            >
               Discover the secrets to maintaining healthy curls with our expert
               tips and tricks.
             </div>
             <div class="blog-image col-span-1 bg-[#000]"></div>
           </div>
           <!-- Date and icons -->
-          <div id="blog-item-icons" class="flex py-[.5rem] gap-2">
+          <div id="blog-item-icons" class="flex py-[.5rem] gap-2 items-center">
             <span id="post-date" class="post-date">July 3</span>
             <div id="blog-icons" class="flex gap-2">
               <svg
@@ -365,8 +386,8 @@
 
     <!-- About section -->
     <div id="about-section" class="h-auto my-1 pt-[1.5rem] mt-[1.5rem]">
-      <h2 class="text-[1.5rem] font-bold">About Curlora</h2>
-      <p class="text-[1.1rem]">
+      <h2 class="text-[1.5rem] font-bold min-md:text-[2rem]">About Curlora</h2>
+      <p class="text-[1.1rem] min-md:text-[1.65rem]">
         Welcome to Curlora, a space where natural hair is celebrated in all its
         beauty. <br />This blog is for every twist, coil, and curl — from
         day-one beginners to seasoned naturals. Expect honest tips, real
@@ -376,8 +397,14 @@
     </div>
 
     <!-- Newsletter section -->
-    <div id="newsletter-section" class="h-auto my-1 pt-[1.5rem] mt-[1.5rem]">
-      <h2 class="text-[1.5rem] font-bold">Subscribe to our newsletter</h2>
+    <!-- mobile ver -->
+    <div
+      id="newsletter-section"
+      class="h-auto my-1 pt-[1.5rem] mt-[1.5rem] min-md:hidden"
+    >
+      <h2 class="text-[1.5rem] font-bold min-md:text-[2rem]">
+        Subscribe to our newsletter
+      </h2>
       <div
         id="envelope"
         class="relative h-auto py-[1.5rem] px-[0.5rem] pt-[.2rem] rounded-lg border-solid border-[#436741] border-2 mt-[.1rem]"
@@ -399,7 +426,7 @@
 
         <!-- envelope stamp -->
         <img
-          class="absolute top-19 left-1/2 w-12 h-12 transform -translate-x-1/2 -translate-y-1/2 object-cover z-10"
+          class="absolute top-19 min-md:top-38 left-1/2 w-12 min-md:w-14 h-12 min-md:h-14 transform -translate-x-1/2 -translate-y-1/2 object-cover z-10"
           src="./assets/images/rose-stamp.png"
           alt="rose letter stamp"
           srcset=""
@@ -413,6 +440,38 @@
             class="block mb-[.6rem] border-b border-black w-full h-[2.5rem] bg-transparent outline-none py-[.5rem] pt-[2rem] pb-[1.2rem] text-center"
           />
           <button class="btn min-w-full">Subscribe</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Newsletter section (tablet and desktop ver) -->
+    <div
+      id="newsletter-section"
+      class="h-auto my-1 pt-[1.5rem] mt-[1.5rem] max-sm:hidden"
+    >
+      <div
+        class="border-[1rem] border-solid border-[#436741] bg-[#436741] rounded-lg"
+      >
+        <div class="newsletter-box grid grid-cols-5">
+          <div class="message-area bg-[#436741] col-span-3">
+            <span class="text-[1.3rem] inline-block w-full mx-auto text-center"
+              >Get weekly updates from our newsletter</span
+            >
+            <h2 class="text-[3rem] text-center">Subscribe Now!</h2>
+            <!-- form area -->
+            <div class="newsletter-form" class="pt-10">
+              <input
+                type="email"
+                name="email"
+                placeholder="Enter your email"
+                class="block mb-[.6rem] border-b border-black w-full h-[2.5rem] bg-transparent outline-none py-[.5rem] pt-[2rem] pb-[1.2rem] text-center"
+              />
+              <button class="btn min-w-full">Subscribe</button>
+            </div>
+          </div>
+          <div
+            class="photo-area border-1 border-solid rounded-b-lg h-[15rem] col-span-2 bg-[url('assets/images/red.jpeg')] bg-center bg-contain]"
+          ></div>
         </div>
       </div>
     </div>

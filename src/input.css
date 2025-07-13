@@ -8,8 +8,15 @@
 }
 
 @layer base {
+  li {
+    @apply list-none;
+  }
   body {
-    @apply bg-[#f4cfa3] m-[1.3rem] text-[#111];
+    @apply bg-[#f4cfa3] m-[1.3rem] text-[#111] min-md:mx-[2rem] min-md:my-[1.3rem];
+  }
+
+  input {
+    @apply min-md:text-[1.5rem];
   }
 
   p {
@@ -19,7 +26,11 @@
 
 @layer components {
   .btn {
-    @apply bg-[#bb6830] h-auto px-6 py-3 rounded-lg text-[1.2rem];
+    @apply bg-[#bb6830] h-auto px-6 py-3 rounded-lg text-[1.2rem] min-md:text-[1.65rem];
+  }
+
+  .blog-image {
+    @apply min-md:h-[6rem];
   }
 
   .blog-item {
@@ -27,7 +38,7 @@
   }
 
   .post-date {
-    @apply text-[1.3rem] pl-[.1rem];
+    @apply text-[1.3rem] min-md:text-[1.4rem] pl-[.1rem];
   }
 }
 
