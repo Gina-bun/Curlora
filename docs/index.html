@@ -30,7 +30,7 @@
     <div id="landing-container" class="overflow-hidden">
       <header
         id="header"
-        class="bg-[#436741] h-[4rem] rounded-tr-lg rounded-tl-lg"
+        class="relative bg-[#436741] inline-block w-full h-[4rem] rounded-tr-lg rounded-tl-lg min-lg:h-[3rem]"
       >
         <nav
           id="iconbar"
@@ -81,7 +81,7 @@
         </nav>
 
         <nav
-          class="h-full max-sm:hidden flex justify-center gap-4 items-center text-[1.5rem]"
+          class="h-full min-lg:h-[3rem] max-sm:hidden flex justify-center gap-4 min-lg:gap-12 items-center text-[1.5rem] min-lg:absolute min-lg:z-55 min-lg:inset-0"
         >
           <li><a href="#">About</a></li>
           <li><a href="#">Stories</a></li>
@@ -91,15 +91,34 @@
       </header>
       <div
         id="landing-section"
-        class="relative bg-[url('./assets/images/green.jpeg')] bg-cover bg-center w-full h-[18rem] border-20 border-t-0 border-solid border-[#436741] rounded-bl-lg rounded-br-lg -mt-px"
+        class="relative bg-[url('./assets/images/green.jpeg')] bg-cover bg-center min-lg:bg-center w-full h-[18rem] min-lg:h-[25rem] border-20 min-lg:border-11 border-t-0 border-solid border-[#436741] rounded-bl-lg rounded-br-lg -mt-px min-lg:mt-[-20px]"
       >
         <!-- overlay -->
-        <div class="absolute inset-0 bg-red-500/25"></div>
+        <div
+          class="absolute inset-0 bg-red-500/25 min-lg:bg-amber-400/42"
+        ></div>
+
+        <!-- Intro + CTA (desktop)-->
+        <div
+          id="intro"
+          class="h-auto mt-[1.5rem] px-[2rem] hidden min-lg:block w-[55rem] absolute inset-0 items-center justify-center z-20"
+        >
+          <span class="text-outline font-bold text-[3rem]">
+            Curlora is a space for natural hair — real, textured, and
+            unapologetic.</span
+          >
+
+          <p class="text-[1.5rem]">
+            From care tips to style inspo, everything here is for the crown you
+            were born with.
+          </p>
+          <button class="btn">Know your hair type</button>
+        </div>
       </div>
     </div>
 
-    <!-- Intro + CTA -->
-    <div id="intro" class="h-auto mt-[1.5rem] px-[0.2rem]">
+    <!-- Intro + CTA(Mobile and tablet) -->
+    <div id="intro" class="h-auto mt-[1.5rem] px-[0.2rem] min-lg:hidden">
       <span class="font-bold text-[1.5rem] min-md:text-[2rem]">
         Curlora is a space for natural hair — real, textured, and
         unapologetic.</span
@@ -112,7 +131,10 @@
     </div>
 
     <!-- Latest blogs -->
-    <div id="latest-blogs" class="h-auto my-1 pt-[1.5rem]">
+    <div
+      id="latest-blogs"
+      class="h-auto my-1 pt-[1.5rem] border-b border-b-black"
+    >
       <h2 class="text-[1.5rem] font-bold min-md:text-[2rem]">Latest Blogs</h2>
 
       <div
@@ -120,17 +142,24 @@
         class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-md:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] gap-3 mt-[0.1rem]"
       >
         <div class="blog-item">
-          <div class="grid grid-cols-3 min-md:grid-cols-4">
+          <div
+            class="grid min-lg:grid-row grid-cols-3 min-md:grid-cols-4 min-lg:grid-cols-1 min-lg:grid-rows-3 min-lg:px-[2rem]"
+          >
             <div
-              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem]"
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem] min-lg:row-span-1 min-lg:order-2"
             >
               Discover the secrets to maintaining healthy curls with our expert
               tips and tricks.
             </div>
-            <div class="blog-image col-span-1 bg-[#000]"></div>
+            <div
+              class="blog-image col-span-1 bg-[#000] min-lg:order-1 min-lg:row-span-2 min-lg:w-full min-lg:rounded-lg"
+            ></div>
           </div>
           <!-- Date and icons -->
-          <div id="blog-item-icons" class="flex py-[.5rem] gap-2 items-center">
+          <div
+            id="blog-item-icons"
+            class="flex py-[.5rem] gap-2 items-center min-lg:px-[2rem]"
+          >
             <span id="post-date" class="post-date text-[1.4rem]">July 3</span>
             <div id="blog-icons" class="flex gap-2">
               <svg
@@ -182,20 +211,94 @@
         </div>
 
         <div class="blog-item">
-          <div class="grid grid-cols-3 min-md:grid-cols-4">
+          <div
+            class="grid min-lg:grid-row grid-cols-3 min-md:grid-cols-4 min-lg:grid-cols-1 min-lg:grid-rows-3 min-lg:px-[2rem]"
+          >
             <div
-              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem]"
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem] min-lg:row-span-1 min-lg:order-2"
             >
               Discover the secrets to maintaining healthy curls with our expert
               tips and tricks.
             </div>
-            <div class="blog-image col-span-1 bg-[#000]"></div>
+            <div
+              class="blog-image col-span-1 bg-[#000] min-lg:order-1 min-lg:row-span-2 min-lg:w-full min-lg:rounded-lg"
+            ></div>
           </div>
           <!-- Date and icons -->
-          <div id="blog-item-icons" class="flex py-[.5rem] gap-2 items-center">
-            <span id="post-date" class="post-date min-md:text-[1.4rem]"
-              >July 3</span
+          <div
+            id="blog-item-icons"
+            class="flex py-[.5rem] gap-2 items-center min-lg:px-[2rem]"
+          >
+            <span id="post-date" class="post-date text-[1.4rem]">July 3</span>
+            <div id="blog-icons" class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-item">
+          <div
+            class="grid min-lg:grid-row grid-cols-3 min-md:grid-cols-4 min-lg:grid-cols-1 min-lg:grid-rows-3 min-lg:px-[2rem]"
+          >
+            <div
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem] min-lg:row-span-1 min-lg:order-2"
             >
+              Discover the secrets to maintaining healthy curls with our expert
+              tips and tricks.
+            </div>
+            <div
+              class="blog-image col-span-1 bg-[#000] min-lg:order-1 min-lg:row-span-2 min-lg:w-full min-lg:rounded-lg"
+            ></div>
+          </div>
+          <!-- Date and icons -->
+          <div
+            id="blog-item-icons"
+            class="flex py-[.5rem] gap-2 items-center min-lg:px-[2rem]"
+          >
+            <span id="post-date" class="post-date text-[1.4rem]">July 3</span>
             <div id="blog-icons" class="flex gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -249,7 +352,10 @@
 
     <!-- Main page starts -->
     <!-- Main blog section -->
-    <div id="main-blogs" class="h-auto my-1 pt-[1.5rem] mt-[1.5rem]">
+    <div
+      id="main-blogs"
+      class="h-auto my-1 pt-[1.5rem] mt-[1.5rem] border-b border-b-black"
+    >
       <h2 class="text-[1.5rem] font-bold min-md:text-[2rem]">For You</h2>
 
       <div
@@ -257,20 +363,25 @@
         class="grid grid-cols-[repeat(auto-fit,_minmax(200px,_1fr))] min-md:grid-cols-[repeat(auto-fit,_minmax(400px,_1fr))] gap-3 mt-[0.1rem]"
       >
         <div class="blog-item">
-          <div class="grid grid-cols-3 min-md:grid-cols-4">
+          <div
+            class="grid min-lg:grid-row grid-cols-3 min-md:grid-cols-4 min-lg:grid-cols-1 min-lg:grid-rows-3 min-lg:px-[2rem]"
+          >
             <div
-              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem]"
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem] min-lg:row-span-1 min-lg:order-2"
             >
               Discover the secrets to maintaining healthy curls with our expert
               tips and tricks.
             </div>
-            <div class="blog-image col-span-1 bg-[#000]"></div>
+            <div
+              class="blog-image col-span-1 bg-[#000] min-lg:order-1 min-lg:row-span-2 min-lg:w-full min-lg:rounded-lg"
+            ></div>
           </div>
           <!-- Date and icons -->
-          <div id="blog-item-icons" class="flex py-[.5rem] gap-2 items-center">
-            <span id="post-date" class="post-date min-md:text-[1.4rem]"
-              >July 3</span
-            >
+          <div
+            id="blog-item-icons"
+            class="flex py-[.5rem] gap-2 items-center min-lg:px-[2rem]"
+          >
+            <span id="post-date" class="post-date text-[1.4rem]">July 3</span>
             <div id="blog-icons" class="flex gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -321,18 +432,94 @@
         </div>
 
         <div class="blog-item">
-          <div class="grid grid-cols-3 min-md:grid-cols-4">
+          <div
+            class="grid min-lg:grid-row grid-cols-3 min-md:grid-cols-4 min-lg:grid-cols-1 min-lg:grid-rows-3 min-lg:px-[2rem]"
+          >
             <div
-              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem]"
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem] min-lg:row-span-1 min-lg:order-2"
             >
               Discover the secrets to maintaining healthy curls with our expert
               tips and tricks.
             </div>
-            <div class="blog-image col-span-1 bg-[#000]"></div>
+            <div
+              class="blog-image col-span-1 bg-[#000] min-lg:order-1 min-lg:row-span-2 min-lg:w-full min-lg:rounded-lg"
+            ></div>
           </div>
           <!-- Date and icons -->
-          <div id="blog-item-icons" class="flex py-[.5rem] gap-2 items-center">
-            <span id="post-date" class="post-date">July 3</span>
+          <div
+            id="blog-item-icons"
+            class="flex py-[.5rem] gap-2 items-center min-lg:px-[2rem]"
+          >
+            <span id="post-date" class="post-date text-[1.4rem]">July 3</span>
+            <div id="blog-icons" class="flex gap-2">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z"
+                />
+              </svg>
+
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"
+                />
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="blog-item">
+          <div
+            class="grid min-lg:grid-row grid-cols-3 min-md:grid-cols-4 min-lg:grid-cols-1 min-lg:grid-rows-3 min-lg:px-[2rem]"
+          >
+            <div
+              class="text-[1.1rem] font-bold col-span-2 min-md:col-span-3 min-md:text-[1.65rem] min-lg:row-span-1 min-lg:order-2"
+            >
+              Discover the secrets to maintaining healthy curls with our expert
+              tips and tricks.
+            </div>
+            <div
+              class="blog-image col-span-1 bg-[#000] min-lg:order-1 min-lg:row-span-2 min-lg:w-full min-lg:rounded-lg"
+            ></div>
+          </div>
+          <!-- Date and icons -->
+          <div
+            id="blog-item-icons"
+            class="flex py-[.5rem] gap-2 items-center min-lg:px-[2rem]"
+          >
+            <span id="post-date" class="post-date text-[1.4rem]">July 3</span>
             <div id="blog-icons" class="flex gap-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -387,13 +574,52 @@
     <!-- About section -->
     <div id="about-section" class="h-auto my-1 pt-[1.5rem] mt-[1.5rem]">
       <h2 class="text-[1.5rem] font-bold min-md:text-[2rem]">About Curlora</h2>
-      <p class="text-[1.1rem] min-md:text-[1.65rem]">
-        Welcome to Curlora, a space where natural hair is celebrated in all its
-        beauty. <br />This blog is for every twist, coil, and curl — from
-        day-one beginners to seasoned naturals. Expect honest tips, real
-        routines, and a whole lot of love for the hair that grows from our
-        roots. Let’s grow together, one curl at a time. 💫
-      </p>
+      <div class="container min-lg:grid min-lg:grid-cols-2">
+        <p class="text-[1.1rem] min-md:text-[1.65rem] min-lg:px-[2rem]">
+          Welcome to Curlora, a space where natural hair is celebrated in all
+          its beauty. <br />This blog is for every twist, coil, and curl — from
+          day-one beginners to seasoned naturals. Expect honest tips, real
+          routines, and a whole lot of love for the hair that grows from our
+          roots. Let’s grow together, one curl at a time. 💫
+        </p>
+
+        <!-- Newsletter(desktop ver) -->
+        <div
+          id="newsletter-section"
+          class="h-auto my-1 pt-[1.5rem hidden min-lg:block"
+        >
+          <div
+            class="border-[1rem] border-solid border-[#436741] bg-[#436741] rounded-lg"
+          >
+            <div class="newsletter-box grid grid-cols-5">
+              <div class="message-area bg-[#436741] col-span-3">
+                <span
+                  class="text-[1.3rem] inline-block w-full mx-auto text-center"
+                  >Get weekly updates from our newsletter</span
+                >
+                <h2 class="text-[3rem] text-center">Subscribe Now!</h2>
+                <!-- form area -->
+                <div class="newsletter-form" class="pt-10">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Enter your email"
+                    class="block mb-[.6rem] border-b border-black w-full h-[2.5rem] bg-transparent outline-none py-[.5rem] pt-[2rem] pb-[1.2rem] text-center"
+                  />
+                  <button
+                    class="btn min-lg:border-[#111] min-lg:text-[#111] min-w-full"
+                  >
+                    Subscribe
+                  </button>
+                </div>
+              </div>
+              <div
+                class="photo-area border-1 border-solid rounded-b-lg h-[15rem] col-span-2 bg-[url('assets/images/red.jpeg')] bg-center bg-contain]"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Newsletter section -->
@@ -444,10 +670,10 @@
       </div>
     </div>
 
-    <!-- Newsletter section (tablet and desktop ver) -->
+    <!-- Newsletter section (tablet ver) -->
     <div
       id="newsletter-section"
-      class="h-auto my-1 pt-[1.5rem] mt-[1.5rem] max-sm:hidden"
+      class="h-auto my-1 pt-[1.5rem] mt-[1.5rem] max-sm:hidden min-lg:hidden"
     >
       <div
         class="border-[1rem] border-solid border-[#436741] bg-[#436741] rounded-lg"
@@ -477,4 +703,3 @@
     </div>
   </body>
 </html>
-<!-- Trying again -->
